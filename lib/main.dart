@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vista_empresa/widgets/formulario_empresa.dart';
+import 'package:vista_empresa/widgets/lista_empresa.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
           ),
           actions: [Icon(Icons.search), SizedBox(width: 30)],
         ),
-        body: const FormEnterpraise(),
+        body: ListEnterpraise(),
       ),
     );
   }

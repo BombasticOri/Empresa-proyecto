@@ -11,34 +11,57 @@ class FormEnterpraise extends StatefulWidget {
 class _FormEnterpraiseState extends State<FormEnterpraise> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const SizedBox(
-          height: 20,
+    return Scaffold(
+        appBar: AppBar(
+          shape: Border(
+            bottom: BorderSide(color: Colors.white, width: 2),
+            top: BorderSide(color: Colors.red, width: 2),
+          ),
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back_ios,
+              color: Colors.white,
+            ),
+          ),
+          backgroundColor: Colors.black,
+          title: Image(
+            image: NetworkImage(
+                'http://profesionalesconprincipios.com/wp-content/uploads/2021/10/logo-white-upeu.png'),
+            width: 235,
+          ),
+          actions: [Icon(Icons.search), SizedBox(width: 30)],
         ),
-        _inputEmpresa(),
-        SizedBox(
-          height: 10,
-        ),
-        _inputRazonSocial(),
-        SizedBox(
-          height: 10,
-        ),
-        _inputTelefono(),
-        SizedBox(
-          height: 10,
-        ),
-        _inputConvenio(),
-        SizedBox(
-          height: 10,
-        ),
-        _inputEstado(),
-        SizedBox(
-          height: 20,
-        ),
-        _inputBoton(),
-      ],
-    );
+        body: Column(
+          children: [
+            const SizedBox(
+              height: 20,
+            ),
+            _inputEmpresa(),
+            SizedBox(
+              height: 10,
+            ),
+            _inputRazonSocial(),
+            SizedBox(
+              height: 10,
+            ),
+            _inputTelefono(),
+            SizedBox(
+              height: 10,
+            ),
+            _inputConvenio(),
+            SizedBox(
+              height: 10,
+            ),
+            _inputEstado(),
+            SizedBox(
+              height: 20,
+            ),
+            _inputBoton(),
+          ],
+        ));
   }
 
   Container _inputEmpresa() {
